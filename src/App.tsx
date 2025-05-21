@@ -2,6 +2,7 @@ import { Grid, GridItem, HStack, Show } from "@chakra-ui/react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import ColorModeSwitch from "./components/ColorModeSwitch";
+import GameGrid from "./components/GameGrid";
 
 function App() {
   return (
@@ -19,12 +20,10 @@ function App() {
           </HStack>
         </GridItem>
         <Show above="lg">
-          <GridItem area="aside" bg="gold">
-            Aside
-          </GridItem>
+          <GridItem area="aside">Aside</GridItem>
         </Show>
-        <GridItem area="main" bg="dodgerblue">
-          Main
+        <GridItem area="main">
+          <GameGrid></GameGrid>
         </GridItem>
       </Grid>
     </>
