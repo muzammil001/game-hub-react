@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import ColorModeSwitch from "./components/ColorModeSwitch";
 import GameGrid from "./components/GameGrid";
+import GenreList from "./components/GenreList";
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
           </HStack>
         </GridItem>
         <Show above="lg">
-          <GridItem area="aside">Aside</GridItem>
+          <GridItem area="aside">
+            <GenreList></GenreList>
+          </GridItem>
         </Show>
         <GridItem area="main">
           <GameGrid />
