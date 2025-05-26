@@ -8,6 +8,7 @@ import { useState } from "react";
 import type { Genre } from "./services/genre-service";
 import PlatformSelector from "./components/PlatformSelector";
 import type { Platform } from "./services/game-service";
+import SortSelector from "./components/SortSelector";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -43,12 +44,15 @@ function App() {
           </GridItem>
         </Show>
         <GridItem area="main">
-          <PlatformSelector
-            onSelectedPlatform={(platform) =>
-              setGameQuery({ ...gameQuery, platform })
-            }
-            selectedPlatform={gameQuery.platform}
-          />
+          <HStack spacing={5} paddingLeft={2} marginBottom={5}>
+            <PlatformSelector
+              onSelectedPlatform={(platform) =>
+                setGameQuery({ ...gameQuery, platform })
+              }
+              selectedPlatform={gameQuery.platform}
+            />
+            <SortSelector />
+          </HStack>
           <GameGrid gameQuery={gameQuery} />
         </GridItem>
       </Grid>
