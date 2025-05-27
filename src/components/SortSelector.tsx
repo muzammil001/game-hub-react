@@ -26,7 +26,7 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Porps) => {
         <MenuList>
           {sortOrders.map((order) => (
             <MenuItem
-              key={order.value}
+              key={order.label}
               onClick={() => onSelectSortOrder(order.value)}
             >
               {order.label}
