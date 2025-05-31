@@ -2,12 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import apiClient, { type FetchResponse } from "../services/api-client";
 import { CACHE_KEY_PLATFORMS } from "./constants";
 import platformData from "../data/platforms";
+import type { Platform } from "../services/game-service";
 
-interface Platform {
-  id: number;
-  name: string;
-  slug: string;
-}
 const usePlatforms = () => {
   const fetchPlatforms = () =>
     apiClient
