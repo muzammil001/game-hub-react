@@ -11,7 +11,7 @@ import useGenres from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 interface Props {
   onSelectedGenre: (genreId: number) => void;
-  selectedGenreId: number | null;
+  selectedGenreId?: number;
 }
 const GenreList = ({ onSelectedGenre, selectedGenreId }: Props) => {
   const { data, error, isLoading } = useGenres();

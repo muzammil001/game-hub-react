@@ -5,7 +5,7 @@ import platforms from "../data/platforms";
 
 interface Props {
   onSelectedPlatform: (platformId: number) => void;
-  selectedPlatformId: number;
+  selectedPlatformId?: number;
 }
 const PlatformSelector = ({
   onSelectedPlatform,
