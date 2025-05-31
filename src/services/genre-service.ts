@@ -1,11 +1,9 @@
-import create from "./http-service";
+import APIClient, { type FetchResponse } from "../services/api-client";
+
 export interface Genre {
   id: number;
   name: string;
   image_background: string;
 }
-export interface FetchGenreResponse {
-  count: number;
-  results: Genre[];
-}
-export default create("/genres");
+
+export default new APIClient<FetchResponse<Genre>>("/genres");

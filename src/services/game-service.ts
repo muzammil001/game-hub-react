@@ -1,4 +1,6 @@
-import create from "./http-service";
+import APIClient, { type FetchResponse } from "../services/api-client";
+import type { Platform } from "./platform-service";
+
 interface Game {
   id: number;
   name: string;
@@ -6,16 +8,6 @@ interface Game {
   parent_platforms: { platform: Platform }[];
   metacritic: number;
 }
-interface FetchGamesResponse {
-  count: number;
-  results: Game[];
-}
 
-interface Platform {
-  id: number;
-  name: string;
-  slug: string;
-}
-
-export default create("/games");
-export type { Game, FetchGamesResponse, Platform };
+export default new APIClient<FetchResponse<Game>>("/games");
+export type { Game, Platform };
