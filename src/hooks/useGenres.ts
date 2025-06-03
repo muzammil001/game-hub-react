@@ -9,7 +9,7 @@ import type { FetchResponse } from "../services/api-client";
 const useGenres = () => {
   return useQuery<FetchResponse<Genre>, Error>({
     queryKey: CACHE_KEY_GENRES,
-    queryFn: genreService.get,
+    queryFn: genreService.getAll,
     staleTime: ms("24h"), //24h
     initialData: { count: genreData.length, results: genreData },
   });

@@ -8,7 +8,7 @@ import ms from "ms";
 const usePlatforms = () => {
   return useQuery<FetchResponse<Platform>, Error>({
     queryKey: CACHE_KEY_PLATFORMS,
-    queryFn: platformService.get,
+    queryFn: platformService.getAll,
     staleTime: ms("24h"), //24h
     initialData: { count: platformData.length, results: platformData },
   });

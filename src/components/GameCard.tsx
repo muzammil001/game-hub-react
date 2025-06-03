@@ -17,7 +17,7 @@ const GameCard = ({ game }: Props) => {
           <Image src={getCroppedImageUrl(game.background_image)}></Image>
           <CardBody>
             <Heading fontSize="2xl">
-              <Link to={`/games/${game.id}`}>{game.name}</Link>
+              <Link to={`/games/${game.slug}`}>{game.name}</Link>
             </Heading>
             <HStack justifyContent="space-between">
               <PlatformIconList
