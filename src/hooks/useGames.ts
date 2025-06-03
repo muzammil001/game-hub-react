@@ -23,7 +23,8 @@ const useGames = () => {
     getNextPageParam: (lastPage, allPages) => {
       return lastPage.results.length > 0 ? allPages.length + 1 : undefined;
     },
-    staleTime: ms("24h"), //24h
+    staleTime: ms("24h"), //24h,
+    initialPageParam: 1,
   });
 };
 
