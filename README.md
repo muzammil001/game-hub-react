@@ -1,54 +1,90 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎮 Game Hub React
 
-Currently, two official plugins are available:
+A modern video game discovery web application built with React, TypeScript, and Vite. Game Hub allows users to explore and search for video games using the RAWG Video Games Database API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Deme: https://game-hub-git-master-muzammi-ghanis-projects.vercel.app/
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔍 **Game Search**: Find games by title.
+- 🎮 **Genre & Platform Filters**: Narrow down games by genre and platform.
+- 📊 **Sorting Options**: Sort games by popularity, release date, or rating.
+- 🌙 **Dark/Light Mode**: Toggle between dark and light themes.
+- 📱 **Responsive Design**: Optimized for various screen sizes.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS, Chakra UI
+- **API**: [RAWG Video Games Database API](https://rawg.io/apidocs)
+
+## 📦 Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/muzammil001/game-hub-react.git
+   cd game-hub-react
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Obtain a RAWG API key**:
+
+   - Sign up at [RAWG.io](https://rawg.io/apidocs) to get your API key.
+
+4. **Configure environment variables**:
+
+   - Create a `.env` file in the root directory and add your API key:
+
+     ```env
+     VITE_RAWG_API_KEY=your_api_key_here
+     ```
+
+5. **Start the development server**:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+   - Open [http://localhost:5173](http://localhost:5173) in your browser to view the app.
+
+## 🧪 Testing
+
+*Include testing instructions here if applicable.*
+
+## 📁 Project Structure
+
+```
+├── public/           # Static assets
+├── src/
+│   ├── assets/       # Images and other static resources
+│   ├── components/   # Reusable components
+│   ├── pages/        # Page components
+│   ├── App.tsx       # Root component
+│   └── main.tsx      # Vite entry point
+├── .env              # Environment variables
+├── index.html        # Main HTML template
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Configuration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Vite Config**: Customize Vite settings in `vite.config.ts`.
+- **ESLint**: Linting configurations are in `eslint.config.js`.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
